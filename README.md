@@ -1,1 +1,1 @@
-# new-repo-template
+# bluexp-google-cloud-storage
