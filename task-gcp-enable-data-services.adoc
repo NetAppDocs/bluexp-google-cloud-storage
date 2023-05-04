@@ -1,0 +1,36 @@
+---
+sidebar: sidebar
+permalink: task-gcp-enable-data-services.html
+keywords: google buckets, google storage, google cloud storage working environment, google cloud storage buckets
+summary: After you discover Google Cloud Storage buckets in BlueXP, you can use NetApp data services for backup, tiering, and data synchronization.
+---
+
+= Use NetApp data services with Google Cloud Storage buckets
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ./media/
+
+[.lead]
+After you discover Google Cloud Storage buckets in BlueXP, you can use NetApp data services for backup, tiering, and data synchronization.
+
+* Use *BlueXP backup and recovery* to back up data from your on-premises ONTAP and Cloud Volumes ONTAP systems to Google Cloud object storage.
++
+To get started, go to the Canvas and drag and drop an on-premises ONTAP or Cloud Volumes ONTAP working environment on your Google Cloud Storage working environment.
++
+https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[Learn more about backing up ONTAP data to Google Cloud Storage^].
+
+* Use *BlueXP tiering* to tier inactive data from on-premises ONTAP clusters to Google Cloud object storage.
++
+To get started, go to the Canvas and drag and drop an on-premises ONTAP working environment on your Google Cloud Storage working environment.
++
+https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html[Learn more about tiering ONTAP data to Google Cloud Storage^].
+
+* Use *BlueXP copy and sync* to synchronize data to or from Google Cloud Storage buckets.
++
+To get started, go to the Canvas and drag and drop the source working environment on the target working environment. Your Google Cloud Storage working environment can be either the source or target. 
++
+You can also select your Google Cloud Storage working environment and click *Copy & sync* from the Services panel to synchronize data to or from Cloud Storage buckets.
++
+https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[Learn more about the BlueXP copy and sync service^].

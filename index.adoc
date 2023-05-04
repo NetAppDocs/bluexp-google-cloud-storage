@@ -1,11 +1,12 @@
 ---
-layout: landing-page
+layout: astra
 sidebar: sidebar
 permalink: index.html
-# lead: Use only if indexpage.lead is not present in _index.yml
-summary: "summary, used for search results"
+lead: Get started using Google Cloud Storage with your BlueXP system.
+summary: Get started using Google Cloud Storage with your BlueXP system.
 ---
-= replace with repository name
+
+= Google Cloud Storage documentation
 :hardbreaks:
 :nofooter:
 :icons: font
