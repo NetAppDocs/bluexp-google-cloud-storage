@@ -15,15 +15,15 @@ sidebar:
       url: /whats-new.html
     - title: Get started
       entries:
-        - title: View your Cloud Storage buckets
+        - title: View your Google Cloud Storage buckets
           url: /task-viewing-gcp-storage.html
-    - title: Manage Cloud Storage buckets
+    - title: Manage Google Cloud Storage buckets
       entries:
-        - title: Add Cloud Storage buckets
+        - title: Add new buckets
           url: /task-add-gcp-bucket.html
-        - title: Change Cloud Storage bucket settings
+        - title: Change bucket settings
           url: /task-change-gcp-bucket-settings.html
-        - title: Use NetApp data services with Cloud Storage buckets
+        - title: Use NetApp data services with Google Cloud Storage buckets
           url: /task-gcp-enable-data-services.html
     - title: Knowledge and support
       entries:
@@ -41,15 +41,15 @@ homepage:
   tiles:
     - title: Get started
       links:
-        - title: View your Cloud Storage buckets
+        - title: View your Google Cloud Storage buckets
           url: task-viewing-gcp-storage.html
-    - title: Manage Cloud Storage buckets
+    - title: Manage Google Cloud Storage buckets
       links:
-        - title: Add Cloud Storage buckets
+        - title: Add buckets
           url: task-add-gcp-bucket.html
         - title: Change bucket settings
           url: task-change-gcp-bucket-settings.html
-        - title: Use NetApp data services with Cloud Storage buckets
+        - title: Use NetApp data services with Google Cloud Storage buckets
           url: task-gcp-enable-data-services.html
     - title: More information
       links:

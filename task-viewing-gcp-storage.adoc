@@ -19,7 +19,7 @@ You can see details about your Google Cloud Storage buckets, including the locat
 
 .Steps
 
-. Install a Connector in the Google account where you want to view your Google Cloud Storage buckets.
+. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[Install a Connector^] in the Google account where you want to view your Google Cloud Storage buckets.
 
 . From the navigation menu, select *Storage > Canvas*.
 +
@@ -27,14 +27,20 @@ You should automatically see a Google Cloud Storage working environment shortly 
 +
 image:screenshot-gcp-cloud-storage-we.png[A screenshot of a Google Cloud Storage working environment.]
 
-. Select the working environment and select an action from the right pane.
+. Select the working environment and select an action from the right pane if you want to enable BlueXP services with your Google Cloud Storage.
 +
-image:screenshot-gcp-cloud-storage-actions.png["A screenshot that shows the actions pane after you select a Google Cloud Storage working environment. The pane shows the total number of buckets and an action for using the Sync service."]
-
-. Select *Sync data* to synchronize data to or from Google Cloud Storage buckets.
+image:screenshot-gcp-cloud-storage-actions.png["A screenshot that shows the actions pane after you select a Google Cloud Storage working environment. The pane shows the total number of buckets and available actions."]
 +
-For more details, see https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[the overview for BlueXP copy and sync^]
+link:task-gcp-enable-data-services.html[See which BlueXP services are available and learn how to use them with your Google Cloud Storage buckets].
 +
-. Select *Enter Working Environment* to view details about the buckets in your Google account.
+. Select *Enter Working Environment*, or double-click the working environment, to view details about the buckets in your Google account.
 +
 image:screenshot-gcp-cloud-storage-details.png[A screenshot that shows the details of a Google Cloud Storage working environment: the total number of buckets, capacity, and locations, and then a table that shows details about each bucket.]
++
+In addition to the columns that appear by default, you can scroll the page to view additional properties for the bucket; for example, the number of Labels, and the type of encryption that has been enabled.
+
+.What's next
+
+You can change some bucket settings directly from BlueXP by clicking image:button-horizontal-more.gif[the three dots more button] for a bucket. link:task-change-gcp-bucket-settings.html[Go here for details].
+
+You can add new buckets by clicking *Add bucket*. link:task-add-gcp-bucket.html[Go here for details].

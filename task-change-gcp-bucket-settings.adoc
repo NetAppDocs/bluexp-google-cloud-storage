@@ -5,7 +5,7 @@ keywords: s3 buckets, s3 storage, s3 working environment, amazon s3 buckets, ama
 summary: Once your Amazon S3 working environment is available in the Canvas, you can change some bucket properties directly from BlueXP.
 ---
 
-= Change S3 bucket settings
+= Change Google Cloud Storage bucket settings
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Once your Amazon S3 working environment is available in the Canvas, you
 :imagesdir: ./media/
 
 [.lead]
-Once your Amazon S3 working environment is available in the Canvas, you can change some bucket properties directly from BlueXP.
+Once your Google Cloud Storage working environment is available in the Canvas, you can change some bucket properties directly from BlueXP.
 
 Note that you can't change the bucket name, AWS account, region, or object lock setting.
 

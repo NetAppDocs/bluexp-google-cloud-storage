@@ -1,11 +1,11 @@
 ---
 sidebar: sidebar
 permalink: task-add-gcp-bucket.html
-keywords: s3 buckets, s3 storage, s3 working environment, amazon s3 buckets, amazon s3 working environment
-summary: Once your Amazon S3 working environment is available in the Canvas, you can add additional buckets directly from BlueXP.
+keywords: google cloud storage buckets, google cloud storage, add buckets
+summary: Once your Google Cloud Storage working environment is available in the Canvas, you can add additional buckets directly from BlueXP.
 ---
 
-= Add S3 buckets
+= Add Google Cloud Storage buckets
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,26 +13,111 @@ summary: Once your Amazon S3 working environment is available in the Canvas, you
 :imagesdir: ./media/
 
 [.lead]
-Once your Amazon S3 working environment is available in the Canvas, you can add additional buckets directly from BlueXP.
+Once your Google Cloud Storage working environment is available in the Canvas, you can add additional buckets directly from BlueXP.
 
 .Steps
 
-. From the Canvas, double-click the Amazon S3 working environment to view the Amazon S3 buckets Overview page, and click *Add bucket*.
+. From the Canvas, double-click the Google Cloud Storage working environment to view the Google Cloud Storage buckets Overview page, and click *Add bucket*.
 +
-image:screenshot-add-amazon-s3-bucket-button.png[A screenshot that shows the details of an Amazon S3 working environment and the Add bucket button.]
+image:screenshot-add-gcp-bucket-button.png[A screenshot that shows the details of an Google Cloud Storage working environment and the Add bucket button.]
 +
 The _Add bucket_ page is displayed.
 +
-image:screenshot-add-amazon-s3-bucket.png[A screenshot showing the Add Bucket page so you can create your own Amazon S3 bucket.]
+image:screenshot-add-gcp-bucket.png[A screenshot showing the Add Bucket page so you can create your own Google Cloud Storage bucket.]
 
-. In the Add bucket page, enter the required information to create the bucket and click *Apply*.
+. Enter the required information in the _Project details_ section.
 +
-.. Enter the name you want to use for the bucket.
-.. Select the AWS account that will be the owner of the bucket. This can be the primary account where the Connector was deployed, or it can be a https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-adding-aws-accounts.html#add-credentials-to-a-connector[different account that you have added to BlueXP^].
-.. Select the AWS region where the bucket will be created.
-.. Optionally, you can enable S3 object locking on the bucket to store objects using a write-once-read-many (WORM) model. If you plan to use object locking, you must enable it when creating the bucket. Enabling Object Lock also enables Versioning. https://docs.aws.amazon.com/AmazonS3/latest/userguide/object-lock.html[Learn more about object locking from the Amazon S3 documentation^].
+[cols=2*,options="header",cols="25,75"]
+|===
+| Field
+| Description
+
+| Bucket Name | Enter the name you want to use for the bucket. https://cloud.google.com/storage/docs/buckets#naming[See the Google Cloud documentation for naming requirements^].
+
+| Project Name a| Select the Google project that will be the owner of the bucket. This can be the primary project where the Connector was deployed, or it can be a different project. 
+
+If you don't see any additional projects in the drop-down list, then you haven't yet associated the BlueXP service account with other projects. Go to the Google Cloud console, open the IAM service, and select the project. Add the service account with the BlueXP role to that project. You'll need to repeat this step for each project.
+
+NOTE: This is the service account that you set up for BlueXP, https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-set-up-permissions-google.html#set-up-permissions-for-the-connector[as described on this page^].
+
+| Labels a| Labels are metadata for your Google Cloud resources. You can add up to 10 label key:value pairs when creating a bucket. 
+
+https://cloud.google.com/compute/docs/labeling-resources[See the Google Cloud documentation for more information about labels^].
+
+|===
+
+. In the _Location_ section, select the location type and region (or regions) where the bucket will be created. You can select from three different types of locations.
 +
-The bucket is created.
+[cols=2*,options="header",cols="35,65"]
+|===
+| If you select the "Location type"...
+| Then...
+
+| Region | Select a single region from the "Available regions" field.
+
+| Dual-region a| Select the geographic location (a single continent) from the "Available locations" field, and then select two regions in the "Available regions" field. 
+
+You can select "Turbo replication" if you want to guarantee geo-redundancy for all newly written objects within a target of 15 minutes.
+
+| Multi-region | Select multiple regions from the "Available regions" field. 
+
+|=== 
++
+Note that all Cloud Storage data is redundant across at least two zones within at least one geographic place as soon as you upload it. https://cloud.google.com/storage/docs/locations[See the Google Cloud documentation for more information about bucket locations^].
+
+. In the _Storage class_ section, select the storage class that will be used for objects in your bucket. You can select from among four storage classes, or you can select _Autoclass_.
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Storage class
+| Description
+
+| Standard | Standard storage is best for data that is frequently accessed ("hot" data) and/or stored for only brief periods of time.
+
+| Nearline | Nearline storage is a low-cost, highly durable storage service for storing infrequently accessed data.
+
+| Coldline | Coldline storage is a very-low-cost, highly durable storage service for storing infrequently accessed data.
+
+| Archive | Archive storage is the lowest-cost, highly durable storage service for data archiving, online backup, and disaster recovery.
+
+| Autoclass | Autoclass automatically transitions objects in your bucket to the appropriate storage classes based on each object's access pattern.
+
+|===
++
+The cost and retrieval fees are different for each storage class. https://cloud.google.com/storage/docs/storage-classes[See the Google Cloud documentation for more information about storage classes^].
+
+. In the _Protection tools_ section, choose whether you want to use any data protection tools to protect objects in the bucket, or data encryption settings to protect access to your data.
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Protection tool
+| Description
+
+| None | By default, no protection tools are enabled on the bucket.
+
+| Object versioning | The bucket will retain a noncurrent object version each time you update, replace, or delete a live object version - continuously maintaining a protected version of the object.
+
+| Retention policy | A retention policy ensures that all current and future objects in the bucket cannot be deleted or replaced until they reach the age you define in the retention policy.
+
+|===
++
+The object versioning and retention policy protection tools can't be enabled at the same time. See the Google Cloud documentation for https://cloud.google.com/storage/docs/storage-classes[more information about object versioning^], and https://cloud.google.com/storage/docs/bucket-lock[more information about retention policies^].
++
+[cols=2*,options="header",cols="25,75"]
+|===
+| Data encryption type
+| Description
+
+| Google-managed encryption key | The .
+
+| Customer-managed encryption key (CMEK)  | A .
+
+|===
++
+The object versioning and retention policy protection tools can't be enabled at the same time. See the Google Cloud documentation for https://cloud.google.com/storage/docs/encryption/default-keys[more information about Google-managed encryption keys^], and https://cloud.google.com/storage/docs/encryption/customer-managed-keys[more information about Customer-managed encryption keys^].
+
+
+.. to create the bucket and click *Add* The bucket is created.
 
 .What's next
 
