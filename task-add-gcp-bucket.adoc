@@ -57,7 +57,7 @@ https://cloud.google.com/compute/docs/labeling-resources[See the Google Cloud do
 
 | Dual-region a| Select the geographic location (a single continent) from the "Available locations" field, and then select two regions in the "Available regions" field. 
 
-You can select "Turbo replication" if you want to guarantee geo-redundancy for all newly written objects within a target of 15 minutes.
+You can enable "Turbo replication" if you want to guarantee geo-redundancy for all newly written objects within a target of 15 minutes.
 
 | Multi-region | Select multiple regions from the "Available regions" field. 
 
@@ -65,7 +65,7 @@ You can select "Turbo replication" if you want to guarantee geo-redundancy for a
 +
 Note that all Cloud Storage data is redundant across at least two zones within at least one geographic place as soon as you upload it. https://cloud.google.com/storage/docs/locations[See the Google Cloud documentation for more information about bucket locations^].
 
-. In the _Storage class_ section, select the storage class that will be used for objects in your bucket. You can select from among four storage classes, or you can select _Autoclass_.
+. In the _Storage class_ section, select the storage class that will be used for objects in your bucket. You can select from among four storage classes, or you can select _Autoclass_ to have Google adjust the class as needed.
 +
 [cols=2*,options="header",cols="25,75"]
 |===
@@ -90,27 +90,33 @@ The cost and retrieval fees are different for each storage class. https://cloud.
 +
 [cols=2*,options="header",cols="25,75"]
 |===
-| Protection tool
+| Protection tool type
 | Description
 
-| None | By default, no protection tools are enabled on the bucket.
+| None |  By default, no protection tools are enabled on the bucket.
 
-| Object versioning | The bucket will retain a noncurrent object version each time you update, replace, or delete a live object version - continuously maintaining a protected version of the object.
+| Object versioning a| The bucket will retain a noncurrent object version each time you update, replace, or delete a live object version - continuously maintaining a protected version of the object. When you select "Object versioning" you can specify two options:
 
-| Retention policy | A retention policy ensures that all current and future objects in the bucket cannot be deleted or replaced until they reach the age you define in the retention policy.
+* *Max. num. of versions per object* - Enter the number of noncurrent versions per object that will be created. 
+* *Expire noncurrent versions after* - Enter the number of days after which the older, noncurrent objects will be removed. 
+
+| Retention policy a| A retention policy ensures that all current and future objects in the bucket cannot be deleted or replaced until they reach the age you define in the retention policy. When you select "Retention policy" you can specify two options:
+
+* *Retain objects for* - Enter the number of seconds, days, months, or years that objects will be retained.
+* *Time frame* - Select whether the time is in seconds, days, months, or years. 
 
 |===
 +
-The object versioning and retention policy protection tools can't be enabled at the same time. See the Google Cloud documentation for https://cloud.google.com/storage/docs/storage-classes[more information about object versioning^], and https://cloud.google.com/storage/docs/bucket-lock[more information about retention policies^].
+The object versioning and retention policy protection tools can't be enabled at the same time. See the Google Cloud documentation for https://cloud.google.com/storage/docs/object-versioning[more information about object versioning^], and https://cloud.google.com/storage/docs/bucket-lock[more information about retention policies^].
 +
 [cols=2*,options="header",cols="25,75"]
 |===
 | Data encryption type
 | Description
 
-| Google-managed encryption key | The .
+| Google-managed encryption key | The . 
 
-| Customer-managed encryption key (CMEK)  | A .
+| Customer-managed encryption key (CMEK)  | A . 
 
 |===
 +
