@@ -19,7 +19,7 @@ You can see details about your Google Cloud Storage buckets, including the locat
 
 .Steps
 
-. https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-quick-start-connector-google.html[Install a Connector^] in the Google account where you want to view your Google Cloud Storage buckets.
+. https://docs.netapp.com/us-en/bluexp-setup-admin/task-quick-start-connector-google.html[Install a Connector^] in the Google account where you want to view your Google Cloud Storage buckets.
 
 . From the navigation menu, select *Storage > Canvas*.
 +

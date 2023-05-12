@@ -19,13 +19,13 @@ After you discover Google Cloud Storage buckets in BlueXP, you can use NetApp da
 +
 To get started, go to the Canvas and drag and drop an on-premises ONTAP or Cloud Volumes ONTAP working environment on your Google Cloud Storage working environment.
 +
-https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-ontap-backup-to-cloud.html[Learn more about backing up ONTAP data to Google Cloud Storage^].
+https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-cloud.html[Learn more about backing up ONTAP data to Google Cloud Storage^].
 
 * Use *BlueXP tiering* to tier inactive data from on-premises ONTAP clusters to Google Cloud object storage.
 +
 To get started, go to the Canvas and drag and drop an on-premises ONTAP working environment on your Google Cloud Storage working environment.
 +
-https://docs.netapp.com/us-en/cloud-manager-tiering/task-tiering-onprem-aws.html[Learn more about tiering ONTAP data to Google Cloud Storage^].
+https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html[Learn more about tiering ONTAP data to Google Cloud Storage^].
 
 * Use *BlueXP copy and sync* to synchronize data to or from Google Cloud Storage buckets.
 +
@@ -33,4 +33,4 @@ To get started, go to the Canvas and drag and drop the source working environmen
 +
 You can also select your Google Cloud Storage working environment and click *Copy & sync* from the Services panel to synchronize data to or from Cloud Storage buckets.
 +
-https://docs.netapp.com/us-en/cloud-manager-sync/concept-cloud-sync.html[Learn more about the BlueXP copy and sync service^].
+https://docs.netapp.com/us-en/bluexp-copy-sync/concept-cloud-sync.html[Learn more about the BlueXP copy and sync service^].
