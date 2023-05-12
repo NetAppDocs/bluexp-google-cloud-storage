@@ -1,8 +1,8 @@
 ---
 sidebar: sidebar
 permalink: task-change-gcp-bucket-settings.html
-keywords: s3 buckets, s3 storage, s3 working environment, amazon s3 buckets, amazon s3 working environment
-summary: Once your Amazon S3 working environment is available in the Canvas, you can change some bucket properties directly from BlueXP.
+keywords: google cloud storage buckets, google cloud storage, edit buckets
+summary: Once your Google Cloud Storage working environment is available in the Canvas, you can change some bucket properties directly from BlueXP.
 ---
 
 = Change Google Cloud Storage bucket settings

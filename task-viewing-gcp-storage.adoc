@@ -32,7 +32,7 @@ image:screenshot-gcp-cloud-storage-we.png[A screenshot of a Google Cloud Storage
 image:screenshot-gcp-cloud-storage-actions.png["A screenshot that shows the actions pane after you select a Google Cloud Storage working environment. The pane shows the total number of buckets and available actions."]
 +
 link:task-gcp-enable-data-services.html[See which BlueXP services are available and learn how to use them with your Google Cloud Storage buckets].
-+
+
 . Select *Enter Working Environment*, or double-click the working environment, to view details about the buckets in your Google account.
 +
 image:screenshot-gcp-cloud-storage-details.png[A screenshot that shows the details of a Google Cloud Storage working environment: the total number of buckets, capacity, and locations, and then a table that shows details about each bucket.]
