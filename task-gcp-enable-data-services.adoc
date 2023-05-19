@@ -25,7 +25,7 @@ https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-ontap-backup-to-clo
 +
 To get started, go to the Canvas and drag and drop an on-premises ONTAP working environment on your Google Cloud Storage working environment.
 +
-https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-aws.html[Learn more about tiering ONTAP data to Google Cloud Storage^].
+https://docs.netapp.com/us-en/bluexp-tiering/task-tiering-onprem-gcp.html[Learn more about tiering ONTAP data to Google Cloud Storage^].
 
 * Use *BlueXP copy and sync* to synchronize data to or from Google Cloud Storage buckets.
 +

@@ -116,16 +116,16 @@ The object versioning and retention policy protection tools can't be enabled at 
 
 | Google-managed encryption key | By default, Google-managed encryption keys are used to used to encrypt your data. 
 
-| Customer-managed encryption key (CMEK)  | You can use your own customer-managed keys for data encryption instead of using the default Google-managed encryption keys. If you're planning to use your own customer-managed keys you'll need to have the Key Ring and the Key Name so you can add this information in the activation wizard. Learn more about customer-managed encryption keys.
+| Customer-managed encryption key (CMEK) | You can use your own customer-managed keys for data encryption instead of using the default Google-managed encryption keys. If you're planning to use your own customer-managed keys you'll need to have the Key Ring and the Key Name so you can add this information in the activation wizard. Learn more about customer-managed encryption keys.
 
 |===
 +
 See the Google Cloud documentation for https://cloud.google.com/storage/docs/encryption/default-keys[more information about Google-managed encryption keys^], and https://cloud.google.com/storage/docs/encryption/customer-managed-keys[more information about Customer-managed encryption keys^].
 
 
-.. to create the bucket and click *Add* The bucket is created.
+. Click *Add* and the bucket is created.
 
 .What's next
 
-You can't manually configure Versioning, Tags, or Encryption when initially adding a bucket. After the bucket is created you can configure these other properties of the bucket. link:task-change-s3-bucket-settings.html[Learn more about changing bucket settings].
+You can't manually configure Versioning, Tags, or Encryption when initially adding a bucket. After the bucket is created you can configure these other properties of the bucket. link:task-change-gcp-bucket-settings.html[Learn more about changing bucket settings].
 

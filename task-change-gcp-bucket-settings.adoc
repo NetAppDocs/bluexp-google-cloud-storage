@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: task-change-gcp-bucket-settings.html
-keywords: google cloud storage buckets, google cloud storage, edit buckets
+keywords: google cloud storage buckets, google cloud storage, edit buckets, change buckets
 summary: Once your Google Cloud Storage working environment is available in the Canvas, you can change some bucket properties directly from BlueXP.
 ---
 
