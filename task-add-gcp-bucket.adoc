@@ -32,9 +32,9 @@ image:screenshot-add-gcp-bucket.png[A screenshot showing the Add Bucket page so 
 | Field
 | Description
 
-| Bucket Name | Enter the name you want to use for the bucket. https://cloud.google.com/storage/docs/buckets#naming[See the Google Cloud documentation for naming requirements^].
+| Bucket name | Enter the name you want to use for the bucket. https://cloud.google.com/storage/docs/buckets#naming[See the Google Cloud documentation for naming requirements^].
 
-| Project Name a| Select the Google project that will be the owner of the bucket. This can be the primary project where the Connector was deployed, or it can be a different project. 
+| Google project a| Select the Google project that will be the owner of the bucket. This can be the primary project where the Connector was deployed, or it can be a different project. 
 
 If you don't see any additional projects in the drop-down list, then you haven't yet associated the BlueXP service account with other projects. Go to the Google Cloud console, open the IAM service, and select the project. Add the service account with the BlueXP role to that project. You'll need to repeat this step for each project.
 
@@ -51,15 +51,15 @@ https://cloud.google.com/compute/docs/labeling-resources[See the Google Cloud do
 [cols=2*,options="header",cols="35,65"]
 |===
 | If you select the "Location type"...
-| Then...
+| Then select...
 
-| Region | Select a single region from the "Available regions" field.
+| Region | A single region from the "Available regions" field.
 
-| Dual-region a| Select the geographic location (a single continent) from the "Available locations" field, and then select two regions in the "Available regions" field. 
+| Dual-region a| The geographic location (a single continent) from the "Available locations" field, and then select two regions in the "Available regions" field. 
 
 You can enable "Turbo replication" if you want to guarantee geo-redundancy for all newly written objects within a target of 15 minutes.
 
-| Multi-region | Select multiple regions from the "Available regions" field. 
+| Multi-region | The geographic multi-region from the "Available multi-regions" field. 
 
 |=== 
 +
@@ -86,18 +86,18 @@ Note that all Cloud Storage data is redundant across at least two zones within a
 +
 The cost and retrieval fees are different for each storage class. https://cloud.google.com/storage/docs/storage-classes[See the Google Cloud documentation for more information about storage classes^].
 
-. In the _Protection tools_ section, choose whether you want to use any data protection tools to protect objects in the bucket, or data encryption settings to protect access to your data.
+. In the _Protection_ section, choose whether you want to use any data protection tools to protect objects in the bucket, or any data encryption configuration to protect access to your data.
 +
 [cols=2*,options="header",cols="25,75"]
 |===
-| Protection tool type
+| Data protection
 | Description
 
-| None |  By default, no protection tools are enabled on the bucket.
+| None | By default, no protection tools are enabled on the bucket.
 
 | Object versioning a| The bucket will retain a noncurrent object version each time you update, replace, or delete a live object version - continuously maintaining a protected version of the object. When you select "Object versioning" you can specify two options:
 
-* *Max. num. of versions per object* - Enter the number of noncurrent versions per object that will be created. 
+* *Max. number of versions per object* - Enter the number of noncurrent versions per object that will be created. 
 * *Expire noncurrent versions after* - Enter the number of days after which the older, noncurrent objects will be removed. 
 
 | Retention policy a| A retention policy ensures that all current and future objects in the bucket cannot be deleted or replaced until they reach the age you define in the retention policy. When you select "Retention policy" you can specify two options:
@@ -111,21 +111,21 @@ The object versioning and retention policy protection tools can't be enabled at 
 +
 [cols=2*,options="header",cols="25,75"]
 |===
-| Data encryption type
+| Data encryption
 | Description
 
 | Google-managed encryption key | By default, Google-managed encryption keys are used to used to encrypt your data. 
 
-| Customer-managed encryption key (CMEK) | You can use your own customer-managed keys for data encryption instead of using the default Google-managed encryption keys. If you're planning to use your own customer-managed keys you'll need to have the Key Ring and the Key Name so you can add this information in the activation wizard. Learn more about customer-managed encryption keys.
+| Customer-managed encryption key (CMEK) a| You can use your own customer-managed keys for data encryption instead of using the default Google-managed encryption keys. If you're planning to use your own customer-managed keys, you'll need to have created them already so you can select the Keys in this page. 
+
+The keys can be in the same Project as the bucket, or you can select a different Project.
 
 |===
 +
 See the Google Cloud documentation for https://cloud.google.com/storage/docs/encryption/default-keys[more information about Google-managed encryption keys^], and https://cloud.google.com/storage/docs/encryption/customer-managed-keys[more information about Customer-managed encryption keys^].
 
-
 . Click *Add* and the bucket is created.
 
-.What's next
-
-You can't manually configure Versioning, Tags, or Encryption when initially adding a bucket. After the bucket is created you can configure these other properties of the bucket. link:task-change-gcp-bucket-settings.html[Learn more about changing bucket settings].
-
+//.What's next
+//
+//You can't manually configure Versioning, Tags, or Encryption when initially adding a bucket. After the bucket is created you can configure these other properties of the bucket. link:task-change-gcp-bucket-settings.html[Learn more about changing bucket settings].
