@@ -36,29 +36,3 @@ sidebar:
 product-family:
   name: BlueXP
   repo: bluexp-family
-homepage:
-  tiles:
-    - title: Get started
-      links:
-        - title: View your Google Cloud Storage buckets
-          url: task-viewing-gcp-storage.html
-    - title: Manage Google Cloud Storage buckets
-      links:
-        - title: Add buckets
-          url: task-add-gcp-bucket.html
-        - title: Change bucket settings
-          url: task-change-gcp-bucket-settings.html
-        - title: Use NetApp data services with Google Cloud Storage buckets
-          url: task-gcp-enable-data-services.html
-    - title: More information
-      links:
-        - title: Google Cloud Storage documentation for management outside of BlueXP
-          url: https://cloud.google.com/storage/docs/creating-buckets
-    - title: Blogs & community
-      links:
-        - title: NetApp Community
-          url: https://community.netapp.com/t5/BlueXP-and-Services/ct-p/CDS
-        - title: BlueXP blog
-          url: https://bluexp.netapp.com/blog/topic/cloud-manager
-        - title: Cloud webinars
-          url: https://bluexp.netapp.com/events
