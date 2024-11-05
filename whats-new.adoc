@@ -15,7 +15,8 @@ summary: Learn what's new in Google Cloud Storage in BlueXP.
 [.lead]
 Learn what's new in Google Cloud Storage in BlueXP.
 
-
+// tag::whats-new[]
 == 10 July 2023
 
 include::_whatsnew/2023-07-10.adoc[]
+// end::whats-new[]
